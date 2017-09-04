@@ -40,7 +40,7 @@ if (guessesLeft > 0) {
 //alert if user presses non A–Z key
     if (userOptions.includes(userGuess) === false) {
       alert("Please pick a valid A–Z key");
-      userPick.pop();
+      //userPick.pop();
     }
 
 //reset counter and tally loss, clear past guesses

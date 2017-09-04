@@ -1,17 +1,29 @@
 body {
 	padding: 10px 10px;
-	background-color: lavender;
+	background: url(../images/starry-sky.gif);
 }
 
 h1 {
 	font-size: 50px;
 	font-weight: bold;
-	margin: 10px 0px;
-	color: gray;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	font-size: 24px;
+	font-style: italic;
+	color: white;
+	text-align: center;
+	margin: 22px 0px;
 }
 
 p {
-	font-size: 16px;
-	line-height: 26px;
-	color: gray;
+	font-size: 20px;
+	line-height: 50px;
+	color: white;
+	text-align: center;
 }
+
+
