@@ -37,6 +37,7 @@ if (guessesLeft > 0) {
       }
     }
 
+
 //alert if user presses non A–Z key
     if (userOptions.includes(userGuess) === false) {
       alert("Psst — I'm thinking of a letter!");
@@ -51,15 +52,10 @@ if (guessesLeft === 0) {
 } 
 
 
-//PSEUDOCODE 
-
-//do not print duplicate values to past guesses, do not decrement guessesLeft
-
-
     console.log(guessesLeft);
 
       render ();
-    };
+};
 
 
 function render () {
