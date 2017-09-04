@@ -39,7 +39,7 @@ if (guessesLeft > 0) {
 
 //alert if user presses non A–Z key
     if (userOptions.includes(userGuess) === false) {
-      alert("Please pick a valid A–Z key");
+      alert("Psst — I'm thinking of a letter!");
       //userPick.pop();
     }
 
