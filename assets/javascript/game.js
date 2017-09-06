@@ -16,31 +16,31 @@ console.log(computerGuess);
 render ();
 
 // This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
+document.onkeyup = function(event) {
 
     // Determines which key was pressed.
     var userGuess = event.key;
     guessArray(userGuess);
     console.log(userGuess);
-
+    console.log(computerGuess);
 
 if (guessesLeft > 0) {
     // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
+
     if (userOptions.includes(userGuess) === true) {
 
-    if (userGuess === computerGuess) {
-        win++;
-        guessesLeft = 9;
-        userPick.splice(0,10);
-        } else {
-        guessesLeft--;
+        if (userGuess === computerGuess) {
+            win++;
+            guessesLeft = 9;
+            userPick.splice(0,10);
+            } else {
+            guessesLeft--;
+            }
+          }
         }
-      }
-    }
 
-
-//alert if user presses non A–Z key
-    if (userOptions.includes(userGuess) === false) {
+//alert if user presses non a–z key
+if (userOptions.includes(userGuess) === false) {
       alert("Psst — I'm thinking of a letter!");
       //userPick.pop();
     }
@@ -50,14 +50,17 @@ if (guessesLeft === 0) {
 	loss++;
 	guessesLeft = 9;
 	userPick.splice(0,10);
-} 
+}
 
+//if guesses reset to 9, randomize computer guess again, so only at very beginning, after a win, and after a loss
+if (guessesLeft >= 9) {
+    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    console.log(computerGuess);
+}
 
     console.log(guessesLeft);
-
       render ();
 };
-
 
 function render () {
         document.getElementById("win").innerHTML = win;
@@ -74,5 +77,3 @@ function guessArray (val1) {
 	userPick.push(val1);
 	}
   };
-
-
