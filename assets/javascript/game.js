@@ -22,7 +22,7 @@ document.onkeyup = function(event) {
     var userGuess = event.key;
     guessArray(userGuess);
     console.log(userGuess);
-    console.log(computerGuess);
+    console.log(computerGuess + " : computer's guess");
 
 if (guessesLeft > 0) {
     // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
@@ -66,7 +66,7 @@ function render () {
         document.getElementById("win").innerHTML = win;
         document.getElementById("loss").innerHTML = loss;
         document.getElementById("guessesLeft").innerHTML = guessesLeft;
-        document.getElementById("userGuess").innerHTML = userPick;
+        document.getElementById("userGuess").innerHTML = userPick.join(" ");
     };
 
 function guessArray (val1) {
